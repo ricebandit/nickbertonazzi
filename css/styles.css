@@ -257,6 +257,7 @@ MOBILE
 
 #mobile-container #content .section#contact{
     background:black;
+    display:table;
     padding-top:10vw;
     text-align:center;
 }
@@ -271,8 +272,8 @@ MOBILE
 
 #mobile-container #content .section#contact #link-resume,
 #mobile-container #content .section#contact #link-email{
-    display:inline-block;
-    margin-top:5vw;
+    display:block;
+    margin:5vw auto;
     max-width:190px;
     width:calc(100vw - 30px);
 }
@@ -457,9 +458,18 @@ MOBILE
 }
 
 #desktop-container #content .section#contact{
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     left:6%;
     text-align:center;
     width:88%;
+}
+
+#mobile-container #content .section#contact .contact-container{
+    display:table-cell;
+    vertical-align:middle;
 }
 
 #desktop-container #content .section#contact img{
@@ -499,11 +509,8 @@ MOBILE
 
 #desktop-container #content .section#contact #link-resume,
 #desktop-container #content .section#contact #link-email{
+    margin:1em auto;
     width:40%;
-}
-
-#desktop-container #content .section#contact #link-email{
-    margin-left:10%;
 }
 
 #desktop-container #content .section#contact #inquiries{
@@ -548,7 +555,13 @@ MOBILE
 
 
     #mobile-container #content .section#contact{
+        display:static;
         padding-top:5vw;
+    }
+
+    #mobile-container #content .section#contact .contact-container{
+        display:static;
+        vertical-align:unset;
     }
 
     #mobile-container #content .section#contact #link-resume, 
